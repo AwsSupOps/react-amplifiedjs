@@ -18,7 +18,7 @@ import './App.css'
 import { Amplify } from 'aws-amplify';
 
 //import { withAuthenticator } from '@aws-amplify/ui-react';
-import { useAuthenticator } from '@aws-amplify/ui-react';
+import { useAuthenticator,View } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 import awsExports from './aws-exports';
@@ -29,11 +29,9 @@ function App(){
    const { user, signOut } = useAuthenticator((context) => [context.user]);
    
   return (
-    <>
-    
-      <h2>Hello {user.username}</h2>
-      <button onClick={signOut}>Sign out</button>
-    </>
+    <Authenticator.Provider>
+ <View>Your app here</View>
+   </Authenticator.Provider>
   );
 }
 
