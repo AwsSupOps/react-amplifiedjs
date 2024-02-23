@@ -30,8 +30,8 @@ function App(){
    
   return (
     <>
+    
       <h2>Hello {user.username}</h2>
-      console.log(" username"+ user)
       <button onClick={signOut}>Sign out</button>
     </>
   );
