@@ -27,7 +27,7 @@ function App({ signOut, user }) {
   return (
     <>
       <h1>Hello {user.username}</h1>
-      console.log(user)
+      console.log(" username"+user)
       <button onClick={signOut}>Sign out</button>
     </>
   );
